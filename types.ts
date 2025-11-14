@@ -3,5 +3,6 @@ export interface Website {
   title: string;
   description: string;
   thumbnailUrl: string;
+  url: string;
   category: string;
 }

@@ -6,30 +6,41 @@ import WebsiteCard from './components/WebsiteCard';
 import CreateSiteModal from './components/CreateSiteModal';
 import Footer from './components/Footer';
 import { initialWebsites } from './constants';
-import './index.css'
+import './index.css';
 
 const App: React.FC = () => {
   const [websites, setWebsites] = useLocalStorage<Website[]>('websites', initialWebsites);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('전체');
 
-  const handleCreateSite = useCallback((newSiteData: Omit<Website, 'id' | 'thumbnailUrl'>) => {
-    const newSite: Website = {
-      ...newSiteData,
-      id: `site-${Date.now()}`,
-      thumbnailUrl: `https://picsum.photos/seed/${Date.now()}/500/300`,
-    };
-    setWebsites(prevSites => [newSite, ...prevSites]);
-    setIsModalOpen(false);
-  }, [setWebsites]);
+  const handleCreateSite = useCallback(
+    (newSiteData: Omit<Website, 'id'>) => {
+      const thumbnailUrl =
+        newSiteData.thumbnailUrl || `https://picsum.photos/seed/${Date.now()}/500/300`;
 
-  const handleDeleteSite = useCallback((siteId: string) => {
-    setWebsites(prevSites => prevSites.filter(site => site.id !== siteId));
-  }, [setWebsites]);
+      const newSite: Website = {
+        ...newSiteData,
+        id: `site-${Date.now()}`,
+        thumbnailUrl,
+      };
 
-  const filteredWebsites = websites.filter(
-    site => activeCategory === '전체' || site.category === activeCategory
+      setWebsites((prevSites) => [newSite, ...prevSites]);
+      setIsModalOpen(false);
+    },
+    [setWebsites],
   );
+
+  const handleDeleteSite = useCallback(
+    (siteId: string) => {
+      setWebsites((prevSites) => prevSites.filter((site) => site.id !== siteId));
+    },
+    [setWebsites],
+  );
+
+  const filteredWebsites =
+    activeCategory === '전체'
+      ? websites
+      : websites.filter((site) => site.category === activeCategory);
 
   return (
     <div className="app-container">
@@ -42,18 +53,18 @@ const App: React.FC = () => {
       <main className="app-main">
         {filteredWebsites.length > 0 ? (
           <div className="site-grid">
-            {filteredWebsites.map(site => (
+            {filteredWebsites.map((site) => (
               <WebsiteCard key={site.id} website={site} onDelete={handleDeleteSite} />
             ))}
           </div>
         ) : (
           <div className="empty-state">
             <h2 className="empty-title">
-              {activeCategory === "전체"
-                ? "아직 웹사이트가 없습니다!"
+              {activeCategory === '전체'
+                ? '아직 웹사이트가 없습니다!'
                 : `'${activeCategory}' 카테고리에 웹사이트가 없습니다.`}
             </h2>
-            <p className="empty-text">"새 사이트 만들기"를 클릭하여 시작하세요.</p>
+            <p className="empty-text">"새 사이트 만들기" 버튼을 눌러 추가해 보세요.</p>
           </div>
         )}
       </main>
@@ -67,5 +78,6 @@ const App: React.FC = () => {
       />
     </div>
   );
-}
+};
+
 export default App;
