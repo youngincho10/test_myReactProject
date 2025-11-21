@@ -1,6 +1,6 @@
 {
-  "homepage": "https://github.com/youngincho10/test_myReactProject/",
-  "name": "나의-웹사이트-빌더",
+  "name":"test_myReactProject",
+  "homepage": "https://youngincho10.github.io/test_myReactProject",
   "private": true,
   "version": "0.0.0",
   "type": "module",
