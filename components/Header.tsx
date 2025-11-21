@@ -2,51 +2,33 @@ import React from 'react';
 import { categories } from '../constants';
 
 interface HeaderProps {
-  onOpenCreateModal: () => void;
   activeCategory: string;
   onSelectCategory: (category: string) => void;
 }
 
-const PlusIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-2"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-    {...props}
-  >
-    <path
-      fillRule="evenodd"
-      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-      clipRule="evenodd"
-    />
-  </svg>
-);
+const navCategories = ['\uc804\uccb4', ...categories];
 
-const navCategories = ['전체', ...categories];
-
-const Header: React.FC<HeaderProps> = ({ onOpenCreateModal, activeCategory, onSelectCategory }) => {
+const Header: React.FC<HeaderProps> = ({ activeCategory, onSelectCategory }) => {
   return (
     <header className="sticky top-0 z-10 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-sm">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex flex-col items-center justify-center py-8 text-center gap-2">
+          <p className="text-sm uppercase tracking-[0.3em] text-indigo-500 font-semibold">AI Studio</p>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-            나의 웹사이트
+            {'\uc990\uaca8\ucc3e\ub294 AI \uc2a4\ud29c\ub514\uc624 \uc571 \ubaa8\uc74c\uc9d1'}
           </h1>
-          <button
-            onClick={onOpenCreateModal}
-            className="flex items-center justify-center px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-slate-50 dark:focus:ring-offset-slate-900 transition-colors"
-          >
-            <PlusIcon />
-            새 사이트 만들기
-          </button>
+          <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-base">
+            {
+              '\uc601\ub2e8\uc5b4 \ud559\uc2b5\ubd80\ud130 \uac74\uac15 \uad00\ub9ac, FPS \uac8c\uc784\uae4c\uc9c0 \ud050\ub808\uc774\uc158\ub41c 3\uac00\uc9c0 \uc571\uc744 \ud55c \uacf3\uc5d0\uc11c \ub9cc\ub098\ubcf4\uc138\uc694.'
+            }
+          </p>
         </div>
-        <nav className="flex items-center space-x-2 sm:space-x-4 border-t border-slate-200 dark:border-slate-700">
+        <nav className="flex items-center justify-center flex-wrap gap-2 border-t border-slate-200 dark:border-slate-700 py-4">
           {navCategories.map((category) => (
             <button
               key={category}
               onClick={() => onSelectCategory(category)}
-              className={`py-3 px-2 sm:px-3 text-sm sm:text-base font-medium transition-colors duration-200 border-b-2 
+              className={`py-2 px-4 text-sm sm:text-base font-medium transition-colors duration-200 border-b-2 
                 ${
                   activeCategory === category
                     ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400'
