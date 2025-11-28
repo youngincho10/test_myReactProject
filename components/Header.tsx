@@ -10,18 +10,13 @@ const navCategories = ['\uc804\uccb4', ...categories];
 
 const Header: React.FC<HeaderProps> = ({ activeCategory, onSelectCategory }) => {
   return (
-    <header className="sticky top-0 z-10 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-sm">
+    <header className="bg-slate-50 dark:bg-slate-900 shadow-sm">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex flex-col items-center justify-center py-8 text-center gap-2">
           <p className="text-sm uppercase tracking-[0.3em] text-indigo-500 font-semibold">AI Studio</p>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
             {'\uc990\uaca8\ucc3e\ub294 AI \uc2a4\ud29c\ub514\uc624 \uc571 \ubaa8\uc74c\uc9d1'}
           </h1>
-          <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-base">
-            {
-              '\uc601\ub2e8\uc5b4 \ud559\uc2b5\ubd80\ud130 \uac74\uac15 \uad00\ub9ac, FPS \uac8c\uc784\uae4c\uc9c0 \ud050\ub808\uc774\uc158\ub41c 3\uac00\uc9c0 \uc571\uc744 \ud55c \uacf3\uc5d0\uc11c \ub9cc\ub098\ubcf4\uc138\uc694.'
-            }
-          </p>
         </div>
         <nav className="flex items-center justify-center flex-wrap gap-2 border-t border-slate-200 dark:border-slate-700 py-4">
           {navCategories.map((category) => (
