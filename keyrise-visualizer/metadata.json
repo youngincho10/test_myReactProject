@@ -1,0 +1,5 @@
+{
+  "name": "KeyRise Visualizer",
+  "description": "An interactive visualizer where pressing keyboard keys (ASDFJKL) causes image-filled strips to rise dynamically. Supports multi-key input, fluid animations, and custom image uploads.",
+  "requestFramePermissions": []
+}

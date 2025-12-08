@@ -5,6 +5,8 @@ import WebsiteCard from './components/WebsiteCard';
 import Footer from './components/Footer';
 import MovieCardApp from './movie-intro-card_-the-priests/App';
 import RonaldoVsMessiApp from './ronaldo-vs-messi_-the-ultimate-choice/App';
+import KeyriseApp from './keyrise-visualizer/App';
+import SelfIntroApp from './self-introduction-card/App';
 import { initialWebsites } from './constants';
 import './index.css';
 
@@ -89,6 +91,22 @@ const App: React.FC = () => {
               element={
                 <PageWithBack>
                   <RonaldoVsMessiApp />
+                </PageWithBack>
+              }
+            />
+            <Route
+              path="/keyrise-visualizer"
+              element={
+                <PageWithBack>
+                  <KeyriseApp />
+                </PageWithBack>
+              }
+            />
+            <Route
+              path="/self-introduction"
+              element={
+                <PageWithBack>
+                  <SelfIntroApp />
                 </PageWithBack>
               }
             />
