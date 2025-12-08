@@ -22,7 +22,7 @@ const MovieCard: React.FC = () => {
     cast: ['김윤석', '강동원'],
     genres: ['공포', '스릴러', '미스터리'],
     synopsis: '뺑소니 교통사고 이후 의문의 증상에 시달리는 한 소녀. 잦은 돌출 행동으로 교단의 눈 밖에 난 김신부는 모두의 반대와 의심 속, 소녀를 구하기 위한 자신만의 계획을 준비한다.',
-    imageUrl: 'https://i.namu.wiki/i/XKjculbQHKxIm6Bv7UsyHavh1y5PzazOZNempWJwSiXQbDBlEtUPcs_eukPfMnkkyiP2csJLsrxnoOfWkEEBiKIb3Q5jyhYIvOoG3eoti8G3CHhuyL8TiAsbLo41e_Tu5raGOOWUhAm36UNw6B9LVg.webp',
+    imageUrl: 'https://i.namu.wiki/i/DbAqLOoTaDGuJUwwqhiYDC1egqLUfy0kZy-gCAviWnBjG_3dexIeocTl_CTmdCycZOVmpKzKJcntBF1LY_pZ5asVv3iIzYX-BaB5MfLNmhQhik00Q1jebo6lrvzpVmDApcR-vDMEbsxcPGruKN6_iQ.webp',
   };
 
   return (
