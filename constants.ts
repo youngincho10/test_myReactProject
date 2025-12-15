@@ -8,7 +8,7 @@ export const initialWebsites: Website[] = [
     title: '\ubb34\ube44 \uce74\ub4dc - \uac10\ud310: \uc218\ud61c',
     description:
       '\ud504\ub9ac\uc2a4\ud2b8 \uc601\ud654 \ub85c\uace0 \uce74\ub4dc \ubc0f \ucd08\uacfc\uc801\uc778 \uc774\ubbf8\uc9c0\ub85c \ubbf8\ub974\ub294 \uc7ac\ubbf8\uc788\ub294 \uc11c\uc2dd.',
-    thumbnailUrl: 'https://i.namu.wiki/i/XKjculbQHKxIm6Bv7UsyHavh1y5PzazOZNempWJwSiXQbDBlEtUPcs_eukPfMnkkyiP2csJLsrxnoOfWkEEBiKIb3Q5jyhYIvOoG3eoti8G3CHhuyL8TiAsbLo41e_Tu5raGOOWUhAm36UNw6B9LVg.webp',
+    thumbnailUrl: 'https://i.namu.wiki/i/Cpk_hpi0LRgOxtSPdsxAfFtiOqcfUn5igpBhjR44MhzLKy506R4tUXLd4jeONOcWg75iC5bCYVypbCNKt2AvhRXWxFW87RKvVXorpNY7Wicve0mJyxbg9pCwTE29yK7az-4S7OBYTQ2GfkBf3RHMDA.webp',
     url: '/movie-card',
     category: '\uc601\ud654',
   },
