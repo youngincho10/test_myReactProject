@@ -7,6 +7,7 @@ import MovieCardApp from './movie-intro-card_-the-priests/App';
 import RonaldoVsMessiApp from './ronaldo-vs-messi_-the-ultimate-choice/App';
 import KeyriseApp from './keyrise-visualizer/App';
 import SelfIntroApp from './self-introduction-card/App';
+import RandomSelectorApp from './랜덤-선택기/App';
 import { initialWebsites } from './constants';
 import './index.css';
 
@@ -107,6 +108,14 @@ const App: React.FC = () => {
               element={
                 <PageWithBack>
                   <SelfIntroApp />
+                </PageWithBack>
+              }
+            />
+            <Route
+              path="/랜덤-선택기"
+              element={
+                <PageWithBack>
+                  <RandomSelectorApp />
                 </PageWithBack>
               }
             />

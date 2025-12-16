@@ -39,11 +39,11 @@ export const initialWebsites: Website[] = [
     url: '/self-introduction',
     category: '\uc790\uae30\uc18c\uac1c',
   },
-    {
-    id: 'site-self-introduction',
+  {
+    id: 'site-random-selector',
     title: '랜덤 선택기',
     description:
-      '메뉴를 추천하는',
+      '메뉴/팀/당번 등을 랜덤으로 뽑아줘요.',
     thumbnailUrl: 'https://wwwcong.com/web/product/big/202202/0ddb26da5562a537acc2f9160920cce1.png',
     url: '/랜덤-선택기',
     category: '\uc790\uae30\uc18c\uac1c',
