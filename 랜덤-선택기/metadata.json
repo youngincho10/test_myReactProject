@@ -1,5 +1,0 @@
-{
-  "name": "랜덤 선택기",
-  "description": "고민되는 선택지들을 입력하면, 그 중 하나를 무작위로 골라주는 앱",
-  "requestFramePermissions": []
-}

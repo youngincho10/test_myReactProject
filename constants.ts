@@ -48,4 +48,13 @@ export const initialWebsites: Website[] = [
     url: '/랜덤-선택기',
     category: '\uc790\uae30\uc18c\uac1c',
   },
+  {
+    id: 'site-mang-ai',
+    title: '맹맹맹.ai',
+    description:
+      '나를 맹구의 선수로',
+    thumbnailUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhrb9IwyRHDEphLc3isE05ENsCNm2o3ec_jw&s',
+    url: '/mangai',
+    category: '축구',
+  },
 ];
